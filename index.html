@@ -22,14 +22,63 @@
     <!-- p - параграф-->
     <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
     <!-- img - додає зображення, src - атрибут для адреси файлу, alt - альтернивний текст для зображення-->
-    <img src="img/grogy.jpg" width="300px" alt="grogy">
+    <img src="img/grogy.jpg" width="300" alt="grogy">
     <!-- br - абзац-->
     <br>
     <!-- a - створює посилання, href - атрибут вказує адрес куди перейти-->
     <a href="https://www.freecatphotoapp.com">Cat photos</a>
     <br>
+    <!-- _blank-->
+    <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos, new page.</a>
+    <br>
     <!-- # - внутрішнє посилання-->
     <a href="#footer">Jump to Bottom</a>
+    <!-- ul - маркований список, li - визначає окремий елемент списку-->
+    <ul>
+        <li>milk</li>
+        <li>cheese</li>
+        <li>sleep</li>
+    </ul>
+    <!-- ol - нумерований список-->
+    <ol>
+        <li>apple</li>
+        <li>banana</li>
+        <li>pear</li>
+    </ol>
+    <!-- input - елемент форми, type - тип елементу форми-->
+    <input type="text">
+    <!-- placeholder - фоновий текст -->
+    <input type="text" placeholder="Just background text">
+    <!-- form - встановлює форму на веб сторінці -->
+    <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+        <!-- required - робить поле обов'язковим для заповнення -->
+        <input type="text" placeholder="web form submit data" required>
+        <!-- button - створює кнопку, type - атрибут, який вказує тип кнопки (звичайна/для відправки форми на сервер/для очищення форми)-->
+        <button type="submit">Submit</button>
+    </form>
+    <!-- div - контейнер загального призначення для інших елементів-->
+    <div>
+    <!-- label - становлює зв'язок між міткою і елементом форми, for - ідентифікатор елементу, з яким необхідно встановити зв'язок-->
+    <label for="indoor">
+        <!-- radio - перемикачі, використовуються, коли потрібно вибрати один варіант з декількох запропонованих-->
+        <!-- checked - позначено за замовчуванням-->
+        <input id="indoor" type="radio" name="indoor-outdoor" checked>Indoor
+    </label>
+    <label for="outdoor">
+        <input id="outdoor" type="radio" name="indoor-outdoor">Outdoor
+    </label>
+    <br>
+    <label for="strong">
+        <!--checkbox - прапорці, дозволяють обрати декілька варіантів із запропонованих-->
+        <input id="strong" type="checkbox" name="personality">Strong
+    </label>
+    <label for="smart">
+        <input id="smart" type="checkbox" name="personaliry" checked>Smart
+    </label>
+    <label for="happy">
+        <input id="happy" type="checkbox" name="personality">Happy
+    </label>
+    </div>
     <!-- footer - підвал сайту, id - ідентифікатор, атрибут, який унікально описує елемент -->
     <footer id="footer">Copyright Cat Photo App</footer>
 </body>
