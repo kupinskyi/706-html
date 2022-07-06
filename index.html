@@ -7,29 +7,40 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- h1 - заголовок першого рівня-->
-    <h1>Hello HTML</h1>
-    <!-- h2 - заголовок другого рівня-->
-    <h2>Hello HTML</h2>
-    <!-- h3 - заголовок третього рівня-->
-    <h3>Hello HTML</h3>
-    <!-- h4 - заголовок четвертого рівня-->
-    <h4>Hello HTML</h4>
-    <!-- h5 - заголовок п'ятого рівня-->
-    <h5>Hello HTML</h5>
-    <!-- h6 - заголовок шостого рівня-->
-    <h6>Hello HTML</h6>
-    <!-- p - параграф-->
-    <p>Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
-    <!-- img - додає зображення, src - атрибут для адреси файлу, alt - альтернивний текст для зображення-->
-    <img src="img/grogy.jpg" width="300" alt="grogy">
-    <!-- br - абзац-->
-    <br>
-    <!-- a - створює посилання, href - атрибут вказує адрес куди перейти-->
-    <a href="https://www.freecatphotoapp.com">Cat photos</a>
-    <br>
-    <!-- _blank-->
-    <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos, new page.</a>
+    <!--main - вказує на основний вміст сторінки-->
+    <main>
+        <!-- section - поділяє сторінку на секції-->
+        <section>
+            <!-- h1 - заголовок першого рівня-->
+            <h1>Hello HTML</h1>
+            <!-- h2 - заголовок другого рівня, em - курсив-->
+            <h2>Hello HTML</h2>
+            <!-- h3 - заголовок третього рівня-->
+            <h3>Hello HTML</h3>
+            <!-- h4 - заголовок четвертого рівня-->
+            <h4>Hello HTML</h4>
+            <!-- h5 - заголовок п'ятого рівня-->
+            <h5>Hello HTML</h5>
+            <!-- h6 - заголовок шостого рівня-->
+            <h6>Hello HTML</h6>
+            <!-- p - параграф, strong - виділяє текст жирним, em - курсив-->
+            <p>Kitty <strong>ipsum dolor</strong> <em>sit amet</em>, shed everywhere shed everywhere stretching attack your ankles chase the red dot, hairball run catnip eat the grass sniff.</p>
+            <!--figure  використовується для групування елементів (зображень і підпису)-->
+            <figure>
+                <!-- img - додає зображення, src - атрибут для адреси файлу, alt - альтернивний текст для зображення-->
+                <img src="img/grogy.jpg" width="300" alt="grogy">
+                <!-- figcaption - містить опис для тега <figure>-->
+                <figcaption>The cutest boy</figcaption>
+            </figure>
+            <!-- br - абзац-->
+            <br>
+            <!-- a - створює посилання, href - атрибут вказує адрес куди перейти-->
+            <a href="https://www.freecatphotoapp.com">Cat photos</a>
+            <br>
+            <!-- _blank - відкриває сторінку у новому вікні-->
+            <a href="https://www.freecatphotoapp.com" target="_blank">Cat photos, new page.</a>
+        </section>
+    </main>
     <br>
     <!-- # - внутрішнє посилання-->
     <a href="#footer">Jump to Bottom</a>
@@ -53,20 +64,27 @@
     <form action="https://www.freecatphotoapp.com/submit-cat-photo">
         <!-- required - робить поле обов'язковим для заповнення -->
         <input type="text" placeholder="web form submit data" required>
-        <!-- button - створює кнопку, type - атрибут, який вказує тип кнопки (звичайна/для відправки форми на сервер/для очищення форми)-->
+        <!-- button - створює кнопку, type - атрибут, який вказує тип кнопки (звичайна button/для відправки форми на сервер submit/для очищення форми reset)-->
         <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
     </form>
+    <br>
     <!-- div - контейнер загального призначення для інших елементів-->
     <div>
-    <!-- label - становлює зв'язок між міткою і елементом форми, for - ідентифікатор елементу, з яким необхідно встановити зв'язок-->
-    <label for="indoor">
-        <!-- radio - перемикачі, використовуються, коли потрібно вибрати один варіант з декількох запропонованих-->
-        <!-- checked - позначено за замовчуванням-->
-        <input id="indoor" type="radio" name="indoor-outdoor" checked>Indoor
-    </label>
-    <label for="outdoor">
-        <input id="outdoor" type="radio" name="indoor-outdoor">Outdoor
-    </label>
+    <!-- fieldset - групує елементи форми -->
+    <fieldset>
+        <!-- label - становлює зв'язок між міткою і елементом форми, for - ідентифікатор елементу, з яким необхідно встановити зв'язок-->
+        <!--legend - створює заголовок групи елементів форми у тезі <fieldset>-->
+        <legend>Is your cat an indoor or outdoor cat?</legend>
+        <label for="indoor">
+            <!-- radio - перемикачі, використовуються, коли потрібно вибрати один варіант з декількох запропонованих-->
+            <!-- value - унікально визначає кожен елемент, щоб клієнтська чи серверна програма могла визначити, який саме пункт був обраний, checked - позначено за замовчуванням-->
+            <input id="indoor" type="radio" name="indoor-outdoor" value="indoor" checked>Indoor
+        </label>
+        <label for="outdoor">
+            <input id="outdoor" type="radio" name="indoor-outdoor" value="outdoor">Outdoor
+        </label>
+    </fieldset>
     <br>
     <label for="strong">
         <!--checkbox - прапорці, дозволяють обрати декілька варіантів із запропонованих-->
